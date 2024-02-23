@@ -99,3 +99,10 @@ Route::prefix('admin')->group(function () {
     Route::get('/post', [PostController::class, 'index']);
     Route::get('/event', [EventController::class, 'index']);
 });
+
+// redirect route
+Route::redirect('/here', '/there');
+
+// view route
+Route::view('/welcome', 'welcome');
+Route::view('/welcome', 'welcome', ['name' => 'Taylor']);
